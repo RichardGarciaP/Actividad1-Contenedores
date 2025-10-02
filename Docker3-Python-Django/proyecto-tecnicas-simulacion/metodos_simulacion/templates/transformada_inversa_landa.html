@@ -1,0 +1,17 @@
+
+{% extends "index.html" %}
+
+
+{%block contenido%}
+<div class="container">
+    <div class="title text-center">
+        <h1 class="title-blue">TRANSFORMADA INVERSA</h1>
+    </div>
+    <form action="/metodos_simulacion/transformada_inversa/" method="POST">{% csrf_token %}
+        <input  class="btn btn-sec btn-block m-4"  type="number" name="lambd" placeholder="Ingrese lambda" required>
+        <input class="btn btn-dark btn-block m-4" type="submit">
+    </form>
+    
+</div>
+
+{% endblock%}

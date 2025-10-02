@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+
+{%block contenido%}
+<div class="container">
+    <div class="title text-center">
+        <h1 class="title-blue">REGRESIÓN LINEAL</h1>
+    </div>
+    <form action="/metodos_regresion/RL_resultado/" method="POST">{% csrf_token %}
+        <div class="row">
+        {% for i in cantidad %}
+
+                <input class="btn btn-sec btn-b col-md-5 m-4"  type="number" step="0.01" name="x" placeholder="Ingrese X" required >
+
+                <input class="btn btn-sec btn-b col-md-5 m-4"  type="number" step="0.01" name="valor" placeholder="Ingrese Y" required >
+        {% endfor %}
+        </div>
+         <button class="btn btn-dark mx-auto d-block btn-no-hover" type="submit">Enviar   <i class="fas fa-arrow-right"></i></button>
+    </form>
+    
+</div>
+{% endblock %}

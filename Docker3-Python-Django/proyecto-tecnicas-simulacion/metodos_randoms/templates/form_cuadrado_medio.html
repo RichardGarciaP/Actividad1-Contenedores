@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+
+
+{%block contenido%}
+<div class="container">
+    <div class="title text-center">
+        <h1 class="title-blue">CUADRADO MEDIO</h1>
+    </div>
+    <form action="/metodos_randoms/CM_resultado/" method="POST">{% csrf_token %}
+        <div class="row">
+            <input  class="btn btn-sec btn-block col-md-5 m-4"  type="number" name="semilla" placeholder="Ingrese la semilla" required>
+            <input  class="btn btn-sec btn-block col-md-5 m-4"  type="number" name="iteraciones" placeholder="Ingrese las iteraciones" required>
+        </div>
+        <input class="btn btn-dark mx-auto d-block " type="submit">
+    </form>
+    
+</div>
+
+{% endblock%}

@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+
+{%block contenido%}
+<div class="container">
+    <div class="title text-center">
+        <h1 class="title-blue">RESULTADOS REGRESIÓN LINEAL</h1>
+    </div>
+    
+    <div class="text-center">
+        <p><strong>P0</strong>= {{p0}}</p>
+        <p><strong>P1</strong>= {{p1}}</p>    
+    </div>
+    
+    <div class="table-responsive-sm">
+        {{data | safe}}
+    </div>
+    <img class="mx-auto d-block" src="/metodos_regresion/RL_grafico/"  width="600px" /> 
+    
+</div>
+
+{% endblock%}

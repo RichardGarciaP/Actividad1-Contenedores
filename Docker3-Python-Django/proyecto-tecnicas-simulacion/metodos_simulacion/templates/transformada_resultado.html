@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+
+{%block contenido%}
+<div class="container">
+    <div class="title text-center">
+        <h1 class="title-blue">RESULTADOS MONTECARLO</h1>
+    </div>
+    <div class="row">
+        <div class="table-responsive-sm w-100">
+            {{data | safe}}
+        </div>
+    </div>
+    <img class="mx-auto d-block w-100" src="/metodos_simulacion/transformada_inversa/grafica/" height="600px"/>       
+</div>
+
+{% endblock%}

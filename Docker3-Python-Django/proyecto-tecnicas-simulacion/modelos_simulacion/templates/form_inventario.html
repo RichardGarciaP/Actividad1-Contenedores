@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+
+
+{%block contenido%}
+<div class="container">
+    <div class="title text-center">
+        <h1 class="title-blue">Modelo De Inventario</h1>
+    </div>
+    <form action="/modelos_simulacion/m_inventario_resultado/" method="POST">{% csrf_token %}
+        <div class="row">
+            <input  class="btn btn-sec btn-block col-md-5 m-4"  type="number" name="numero" placeholder="Ingrese Numero De Interacciones" required>
+            <input  class="btn btn-sec btn-block col-md-5 m-4"  type="number" name="demanda" placeholder="Ingrese la Demanda" step="0.01" required>
+            <input  class="btn btn-sec btn-block col-md-5 m-4"  type="number" name="costoO" placeholder="Costo De Ordenar"step="0.01" required>
+            <input  class="btn btn-sec btn-block col-md-5 m-4"  type="number" name="costoM" placeholder="Costo De Mantenimiento " step="0.01" required>
+            <input  class="btn btn-sec btn-block col-md-5 m-4"  type="number" name="costoP" placeholder="Costo del Producto por unidad"step="0.01" required>
+            <input  class="btn btn-sec btn-block col-md-5 m-4"  type="number" name="Tespera" placeholder="Tiempo De Espera" step="0.01" required>
+            <input  class="btn btn-sec btn-block col-md-5 m-4"  type="number" name="DiasAno" placeholder="Dias De Espera"step="0.01" required>
+
+             
+            
+        </div>
+        <input class="btn btn-dark mx-auto d-block " type="submit">
+    </form>
+    
+</div>
+
+{% endblock%}

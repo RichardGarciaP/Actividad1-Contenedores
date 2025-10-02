@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+
+
+{%block contenido%}
+<div class="container">
+    <div class="title text-center">
+        <h1 class="title-blue">LINEAS DE ESPERA</h1>
+    </div>
+    <form action="/modelos_simulacion/ls_resultado/" method="POST">{% csrf_token %}
+        <div class="row">
+            <input  class="btn btn-sec btn-block col-md-5 m-4"  type="number" name="numero" placeholder="Ingrese Numero N Iteraciónes a Generar" required>
+            <input  class="btn btn-sec btn-block col-md-5 m-4"  type="number" name="landa" placeholder="Ingrese Landa" step="0.01" required>
+            <input  class="btn btn-sec btn-block col-md-5 m-4"  type="number" name="nu" placeholder="Ingrese Nu"step="0.01" required>
+             
+            
+        </div>
+        <input class="btn btn-dark mx-auto d-block " type="submit">
+    </form>
+    
+</div>
+
+{% endblock%}

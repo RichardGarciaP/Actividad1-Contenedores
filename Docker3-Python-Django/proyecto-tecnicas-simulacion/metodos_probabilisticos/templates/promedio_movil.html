@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+
+{%block contenido%}
+<div class="container">
+    <div class="title text-center">
+        <h1 class="title-blue">RESULTADOS P.MOVIL</h1>
+    </div>
+    <div class="table-responsive-sm">
+        {{data | safe}}
+    </div>
+    
+    <img class="mx-auto d-block" src="/metodos_probabilisticos/PM_resultado/grafico/"  width="600px" /> 
+    
+</div>
+
+{% endblock%}
+
+
+
+

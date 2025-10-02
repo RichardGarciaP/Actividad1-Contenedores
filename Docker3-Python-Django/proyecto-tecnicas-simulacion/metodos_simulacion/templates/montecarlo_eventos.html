@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+
+
+{%block contenido%}
+<div class="container">
+    <div class="title text-center">
+        <h1 class="title-blue">MONTECARLO</h1>
+    </div>
+    <form action="/metodos_simulacion/montecarlo_resultado/" method="POST">{% csrf_token %}
+        <input  class="btn btn-sec btn-block m-4"  type="number" name="cantidad_eventos" placeholder="Ingrese la cantidad de eventos aleatorios" required>
+        <input class="btn btn-dark btn-block m-4" type="submit">
+    </form>
+    
+</div>
+
+{% endblock%}

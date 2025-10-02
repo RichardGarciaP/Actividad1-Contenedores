@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+
+{%block contenido%}
+<div class="container">
+    <div class="title text-center">
+        <h1 class="title-blue">RESULTADOS ANALITICOS</h1>
+    </div>
+    <div class="table-responsive-sm">
+        {{calculos | safe}}
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="title text-center mt-5 mb-5">
+        <h1 class="title-blue">RESULTADOS TABLA 1</h1>
+    </div>
+    <div class="table-responsive-sm">
+        {{data | safe}}
+    </div>
+         <img class="mx-auto d-block" src="/modelos_simulacion/m_inventario/grafica"  width="600px" />       
+</div>
+<div class="container-fluid">
+    <div class="title text-center mt-5 mb-5">
+        <h1 class="title-blue">RESULTADOS SIMULACIÓN</h1>
+    </div>
+    <div class="table-responsive-sm">
+        {{datas | safe}}
+    </div>
+       
+</div>
+
+{% endblock%}
